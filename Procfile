@@ -1,0 +1,1 @@
+web: gunircorn APIbloqueo.wsgi --log-file -

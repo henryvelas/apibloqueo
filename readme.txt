@@ -1,0 +1,12 @@
+certifi==2020.11.8
+chardet==3.0.4
+Django==2.2.1
+django-progressive-web-app==0.1.1
+idna==2.10
+Pillow==7.2.0
+psycopg2==2.8.5
+psycopg2-binary==2.8.6
+pytz==2020.1
+requests==2.25.0
+sqlparse==0.3.1
+urllib3==1.26.2
