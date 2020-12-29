@@ -1,1 +1,1 @@
-web: gunircorn APIbloqueo.wsgi --log-file -
+web: gunicorn APIbloqueo.wsgi --log-file -
