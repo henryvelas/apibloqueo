@@ -18,6 +18,9 @@ from django.shortcuts import render
 from django.core import serializers
 from django.http import HttpResponse
 
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
 
 def conexionn():
     conect = psycopg2.connect(host="localhost", port="5432",
@@ -26,15 +29,16 @@ def conexionn():
     return conect
 
 
-class vista(View):
+class vista(APIView):
 
     def get(self, request):
         list2 = Bloqueo.objects.order_by('idd')
-        return JsonResponse(list(list2.values()), safe=False)
+        # return JsonResponse(list(list2.values()), safe=False)
+        return Response(list2.values()) 
 
-
-class detalle(View):
+class detalle(APIView):
 
     def get(self, request, pk):
         list2 = Bloqueo.objects.get(pk=pk)
-        return JsonResponse(model_to_dict(list2))
+        # return JsonResponse(model_to_dict(list2))
+        return Response( model_to_dict(list2))
